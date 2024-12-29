@@ -10,6 +10,7 @@
 
 <body>
     <div class="accordion-wrapper">
+        <!-- 1 accordion -->
         <div class="accordion">
             <input type="checkbox" name="radio-a" id="check1">
             <label class="accordion-label" for="check1"> What is a Qualified Property Investment Advisor?</label>
@@ -23,6 +24,7 @@
                     brokers. &#128522;</p>
             </div>
         </div>
+        <!-- 2 accordion -->
         <div class="accordion">
             <input type="checkbox" name="radio-a" id="check2">
             <label class="accordion-label" for="check2"> What is the best investment strategy?</label>
@@ -34,6 +36,7 @@
                 </p>
             </div>
         </div>
+        <!-- 3 accordion -->
         <div class="accordion">
             <input type="checkbox" name="radio-a" id="check3">
             <label class="accordion-label" for="check3"> Is a 95% loan approval rate good?</label>
@@ -43,6 +46,7 @@
                     are built to maximise your chance of approval first time. </p>
             </div>
         </div>
+        <!-- 4 accordion -->
         <div class="accordion">
             <input type="checkbox" name="radio-a" id="check4">
             <label class="accordion-label" for="check4"> I am outside of Adelaide. Can we work together?</label>
@@ -51,6 +55,7 @@
                     PJ’s. </p>
             </div>
         </div>
+        <!-- 5 accordion -->
         <div class="accordion">
             <input type="checkbox" name="radio-a" id="check5">
             <label class="accordion-label" for="check5"> I am a first time buyer. Will you work with me? </label>
@@ -60,6 +65,7 @@
                     and Nath or Arianna who were both first time buyers. </p>
             </div>
         </div>
+        <!-- 6 accordion -->
         <div class="accordion">
             <input type="checkbox" name="radio-a" id="check6">
             <label class="accordion-label" for="check6"> How do you get paid? </label>
@@ -73,6 +79,7 @@
                     free. </p>
             </div>
         </div>
+        <!-- 7 accordion -->
         <div class="accordion">
             <input type="checkbox" name="radio-a" id="check7">
             <label class="accordion-label" for="check7"> Why do you charge an onboarding fee?</label>
@@ -83,6 +90,7 @@
                     Success. </p>
             </div>
         </div>
+        <!-- 8 accordion -->
         <div class="accordion">
             <input type="checkbox" name="radio-a" id="check8">
             <label class="accordion-label" for="check8"> Shouldn’t I just apply directly?</label>
@@ -94,6 +102,7 @@
                     chat with a trusted broker first. </p>
             </div>
         </div>
+        <!-- 9 accordion -->
         <div class="accordion">
             <input type="checkbox" name="radio-a" id="check9">
             <label class="accordion-label" for="check9"> I am buying my place of residence. Can you still help?</label>
@@ -109,16 +118,66 @@
             </div>
 
         </div>
+        <!-- 9 accordion -->
+        <div class="accordion">
+            <input type="checkbox" name="radio-a" id="check9">
+            <label class="accordion-label" for="check9"> I am buying my place of residence. Can you still help?</label>
+
+            <div class="accordion-content">
+                <p>
+                    Of course! Most people looking to buy their place of residence either won't stay there forever or
+                    are looking
+                    to build equity in it to use at a later date. Having someone to work by your side to identify any
+                    risks and
+                    future proof your strategy can only be a good thing as one mistake in the set up can set you back
+                    significantly. </p>
+            </div>
+
+        </div>
+        <!-- 10 accordion -->
+        <div class="accordion">
+            <input type="checkbox" name="radio-a" id="check10">
+            <label class="accordion-label" for="check10"> I am buying my place of residence. Can you still help?</label>
+
+            <div class="accordion-content">
+                <p>
+                    Of course! Most people looking to buy their place of residence either won't stay there forever or
+                    are looking
+                    to build equity in it to use at a later date. Having someone to work by your side to identify any
+                    risks and
+                    future proof your strategy can only be a good thing as one mistake in the set up can set you back
+                    significantly. </p>
+            </div>
+
+        </div>
+        <!-- 11 accordion -->
+        <div class="accordion">
+            <input type="checkbox" name="radio-a" id="check11">
+            <label class="accordion-label" for="check11"> I am buying my place of residence. Can you still help?</label>
+
+            <div class="accordion-content">
+                <p>
+                    Of course! Most people looking to buy their place of residence either won't stay there forever or
+                    are looking
+                    to build equity in it to use at a later date. Having someone to work by your side to identify any
+                    risks and
+                    future proof your strategy can only be a good thing as one mistake in the set up can set you back
+                    significantly. </p>
+            </div>
+
+        </div>
 
     </div>
-
+    <div class="toggle-buttons">
+        <button id="seeMore" class="btn">See More</button>
+        <button id="seeLess" class="btn" style="display: none;">See Less</button>
+    </div>
 
     <script>
         var acc = document.querySelectorAll(".accordion input[type='checkbox']");
 
         for (var i = 0; i < acc.length; i++) {
             acc[i].addEventListener("change", function () {
-                // Uncheck all checkboxes
                 for (var j = 0; j < acc.length; j++) {
                     if (acc[j] !== this) {
                         acc[j].checked = false;
@@ -126,6 +185,37 @@
                 }
             });
         }
+        document.addEventListener("DOMContentLoaded", () => {
+            const accordions = document.querySelectorAll(".accordion");
+            const seeMoreBtn = document.getElementById("seeMore");
+            const seeLessBtn = document.getElementById("seeLess");
+
+            // Initially show only the first 4 accordions
+            function showInitialAccordions() {
+                accordions.forEach((accordion, index) => {
+                    accordion.style.display = index < 4 ? "block" : "none";
+                });
+                seeMoreBtn.style.display = "inline-block";
+                seeLessBtn.style.display = "none";
+            }
+
+            // Show all accordions
+            function showAllAccordions() {
+                accordions.forEach((accordion) => {
+                    accordion.style.display = "block";
+                });
+                seeMoreBtn.style.display = "none";
+                seeLessBtn.style.display = "inline-block";
+            }
+
+            // Add event listeners for buttons
+            seeMoreBtn.addEventListener("click", showAllAccordions);
+            seeLessBtn.addEventListener("click", showInitialAccordions);
+
+            // Set the initial state
+            showInitialAccordions();
+        });
+
     </script>
 
 </body>
