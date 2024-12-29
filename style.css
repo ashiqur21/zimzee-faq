@@ -42,7 +42,7 @@ input {
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  padding: 16px;
+  padding: 16px 30px;
   font-weight: bold;
   cursor: pointer;
   font-size: 19.2px;
@@ -71,6 +71,9 @@ input {
   background: #f8f8f8;
   border-radius: 20px;
   font-size: 15.75px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 input:checked + .accordion-label::after {
@@ -85,8 +88,17 @@ input:checked ~ .accordion-content {
   padding: 20px 30px;
   box-sizing: border-box;
 }
+.accordion-content ul {
+  padding-left: 20px;
+}
+.accordion-content p {
+  padding: 0 !important;
+}
 .accordion-content ul li {
   list-style: decimal;
+}
+.latterLi li {
+  list-style: lower-alpha !important;
 }
 .title {
   font-size: 3rem;
@@ -116,18 +128,19 @@ input:checked ~ .accordion-content {
 }
 
 .btn {
-  padding: 10px 20px;
-  background-color: #007bff;
+  padding: 10px 30px;
+  background-color: #ff6600;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-family: "Poppins", serif;
-  font-size: 16px;
+  font-size: 12px;
+  border-radius: 140px;
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #ff6600;
 }
 
 @media screen and (min-width: 0px) and (max-width: 480px) {
