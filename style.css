@@ -70,10 +70,6 @@ input {
   transition: all 0.3s;
   background: #f8f8f8;
   border-radius: 20px;
-}
-
-.accordion-content p {
-  margin: 0;
   font-size: 15.75px;
 }
 
@@ -85,13 +81,13 @@ input:checked + .accordion-label::after {
 }
 
 input:checked ~ .accordion-content {
-  padding: 20px;
-  height: 50vh;
-  padding-bottom: 70px;
-
+  max-height: 100%;
+  padding: 20px 30px;
+  box-sizing: border-box;
 }
-
-
+.accordion-content ul li {
+  list-style: decimal;
+}
 .title {
   font-size: 3rem;
   margin: 2rem 0;
@@ -104,20 +100,8 @@ input:checked ~ .accordion-content {
   cursor: pointer;
 }
 
-.question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .question h3 {
   font-size: 1.8rem;
-}
-
-.answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 1s ease-in-out;
 }
 
 .answer p {
@@ -126,9 +110,6 @@ input:checked ~ .accordion-content {
   font-size: 1.4rem;
 }
 
-.faq.active .answer {
-  max-height: 300px;
-}
 .toggle-buttons {
   text-align: center;
   margin-top: 16px;
