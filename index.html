@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="accordion-wrapper">
+        <div class="accordion">
+            <input type="checkbox" name="radio-a" id="check1">
+            <label class="accordion-label" for="check1"> What is a Qualified Property Investment Advisor?</label>
+            <div class="accordion-content">
+                <p>It is a designation from the Property Investment Professionals of Australia (PIPA). It signifies
+                    expertise in
+                    property investment advice, ensuring clients receive specialised guidance tailored to their
+                    investment goals.
+                    QPIA’s must also uphold PIPA’s code of conduct. Currently there are less than 20 QPIA accredited
+                    mortgage
+                    brokers. &#128522;</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" name="radio-a" id="check2">
+            <label class="accordion-label" for="check2"> What is the best investment strategy?</label>
+            <div class="accordion-content">
+                <p>Long answer short: the one you can stick to that supports your long term goals. Tactics such as debt
+                    recycling, negative/positive gearing, manufacturing equity can all yield great results. The best
+                    thing to do
+                    is book a free strategy session and get some clarity.
+                </p>
+            </div>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" name="radio-a" id="check3">
+            <label class="accordion-label" for="check3"> Is a 95% loan approval rate good?</label>
+            <div class="accordion-content">
+                <p>Between brokers and banks a total of 40% of home loan applications are declined. Our systems and
+                    processes
+                    are built to maximise your chance of approval first time. </p>
+            </div>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" name="radio-a" id="check4">
+            <label class="accordion-label" for="check4"> I am outside of Adelaide. Can we work together?</label>
+            <div class="accordion-content">
+                <p>Definitely! We are fully digital so we can work toward your property goals while you are in your
+                    PJ’s. </p>
+            </div>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" name="radio-a" id="check5">
+            <label class="accordion-label" for="check5"> I am a first time buyer. Will you work with me? </label>
+            <div class="accordion-content">
+                <p>We have helped many first home buyers achieve their property drea. Scroll up and hear directly from
+                    Rachelle
+                    and Nath or Arianna who were both first time buyers. </p>
+            </div>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" name="radio-a" id="check6">
+            <label class="accordion-label" for="check6"> How do you get paid? </label>
+
+            <div class="accordion-content">
+                <p>Our income is broken down into two main components. A one-time onboarding fee for new clients of $399
+                    + GST
+                    when the loan application process is started. And commissions paid by the bank. We receive zero
+                    payments from
+                    any partners we connect you with. Your initial strategy session is free of charge and obligation
+                    free. </p>
+            </div>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" name="radio-a" id="check7">
+            <label class="accordion-label" for="check7"> Why do you charge an onboarding fee?</label>
+            <div class="accordion-content">
+                <p>To put it simply, so we can spend more time with clients who are committed and less time with those
+                    who are
+                    not a good fit. We don’t profit from the fee, as it is reinvested into our 5 Steps To Client
+                    Success. </p>
+            </div>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" name="radio-a" id="check8">
+            <label class="accordion-label" for="check8"> Shouldn’t I just apply directly?</label>
+            <div class="accordion-content">
+                <p>There’s no broker bias here. Believe it or not, there is times where it IS better to apply direct. I
+                    have
+                    sent potential clients directly to lenders when it is in there best interest. But you should always
+                    have a
+                    chat with a trusted broker first. </p>
+            </div>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" name="radio-a" id="check9">
+            <label class="accordion-label" for="check9"> I am buying my place of residence. Can you still help?</label>
+
+            <div class="accordion-content">
+                <p>
+                    Of course! Most people looking to buy their place of residence either won't stay there forever or
+                    are looking
+                    to build equity in it to use at a later date. Having someone to work by your side to identify any
+                    risks and
+                    future proof your strategy can only be a good thing as one mistake in the set up can set you back
+                    significantly. </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        var acc = document.querySelectorAll(".accordion input[type='checkbox']");
+
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("change", function () {
+                // Uncheck all checkboxes
+                for (var j = 0; j < acc.length; j++) {
+                    if (acc[j] !== this) {
+                        acc[j].checked = false;
+                    }
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
